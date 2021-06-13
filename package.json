@@ -1,8 +1,8 @@
 {
   "name": "email-validator-node",
+  "description": "A simple package to validate format and MX for an e-mail address.",
   "version": "0.0.1",
   "license": "MIT",
-  "private": true,
   "repository": "github:bsonmez/email-validator-node",
   "author": {
     "name": "Burak Sonmez",
