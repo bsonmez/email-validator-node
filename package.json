@@ -1,0 +1,24 @@
+{
+  "name": "email-validator-node",
+  "version": "0.0.1",
+  "license": "MIT",
+  "private": true,
+  "repository": "github:bsonmez/email-validator-node",
+  "author": {
+    "name": "Burak Sonmez",
+    "url": "https://github.com/bsonmez"
+  },
+  "keywords": [
+    "email",
+    "validation",
+    "validator",
+    "domains",
+    "disposable"
+  ],
+  "dependencies": {
+    "node-range": "0.1.x"
+  },
+  "devDependencies": {
+    "jest": "^26.1.0"
+  }
+}
