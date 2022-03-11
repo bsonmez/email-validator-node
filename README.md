@@ -16,17 +16,17 @@ yarn add email-validator-node
 
 ```javascript
 var {
-  isEmailValid,
+  checkEmail,
   isEmailFormatValid,
   isMXRecordValid,
   isBlacklisted,
 } = require("email-validator-node");
 
 (async () => {
-  // isEmailValid includes all other validation methods inside. If you run it, no need to run others.
-  await isEmailValid("test@google.com"); // { isValid:true }
-  await isEmailValid("asd@asd.asd"); // { isValid:false, message:"not-found" }
-  await isEmailValid("test@0-00.usa.cc"); // { isValid:false, message:"blacklist" }
+  // checkEmail includes all other validation methods inside. If you run it, no need to run others.
+  await checkEmail("test@google.com"); // { isValid:true }
+  await checkEmail("asd@asd.asd"); // { isValid:false, message:"not-found" }
+  await checkEmail("test@0-00.usa.cc"); // { isValid:false, message:"blacklist" }
 
   // checks only email format
   await isEmailFormatValid("test@email.com"); // true

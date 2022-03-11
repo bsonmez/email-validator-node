@@ -11,7 +11,7 @@ var isValidEmail = /^(?!(?:(?:\x22?\x5C[\x00-\x7E]\x22?)|(?:\x22?[^\x5C\x22]\x22
  * @param {String} email - The possible email input
  * @return {validateEmailResponse} true is the specified email is valid, false otherwise
  */
-async function isEmailValid(email: string): Promise<validateEmailResponse> {
+async function checkEmail(email: string): Promise<validateEmailResponse> {
   const isFormatValid = await isEmailFormatValid(email);
 
   if (!isFormatValid) {
@@ -101,7 +101,7 @@ async function isMXRecordValid(email: string): Promise<validateEmailResponse> {
 
 
 module.exports = {
-  isEmailValid,
+  checkEmail,
   isEmailFormatValid,
   isMXRecordValid,
   isBlacklisted,
