@@ -2,3 +2,5 @@ node_modules
 npm-debug.log
 .vscode
 package-lock.json
+lib/
+yarn-debug.log

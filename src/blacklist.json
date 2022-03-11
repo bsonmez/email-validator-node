@@ -1,4 +1,4 @@
-module.exports = [
+[
   "0-00.usa.cc",
   "0-attorney.com",
   "0-mail.com",
@@ -33752,5 +33752,5 @@ module.exports = [
   "zzv2bfja5.pl",
   "zzz.com",
   "zzzmail.pl",
-  "zzzzzzzzzzzzz.com",
-];
+  "zzzzzzzzzzzzz.com"
+]
