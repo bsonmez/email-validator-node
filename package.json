@@ -12,6 +12,7 @@
     "lib": "lib"
   },
   "files": [
+    "lib",
     "index.js"
   ],
   "scripts": {
