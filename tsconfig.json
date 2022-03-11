@@ -3,7 +3,7 @@
     "declaration": true,
     "declarationDir": "./lib",
     "target": "es5",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": ["es6"],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -18,7 +18,6 @@
     "isolatedModules": true,
     "jsx": "preserve"
   },
-
-  "include": ["**/*.ts", "**/*.tsx"],
+  "include": ["src/index.ts"],
   "exclude": ["node_modules", "**/__tests__/*"]
 }

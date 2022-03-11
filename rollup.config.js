@@ -20,4 +20,22 @@ export default [
       }),
     ],
   },
+  {
+    input: "./src/blacklist.js",
+    output: [
+      {
+        file: "./lib/blacklist.js",
+        format: "cjs",
+        sourcemap: true,
+        exports: "named",
+      },
+    ],
+    plugins: [
+      external(),
+      typescript({
+        clean: true,
+        useTsconfigDeclarationDir: true,
+      }),
+    ],
+  },
 ];
