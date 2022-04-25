@@ -19,9 +19,7 @@
     "dev": "rollup -c -w",
     "build": "rollup -c",
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
-    "lint": "tslint -p tsconfig.json",
-    "download": "apollo service:download --endpoint=http://localhost:4003/graphql ../../graphql-schema.json",
-    "generate": "apollo codegen:generate --localSchemaFile=../../graphql-schema.json --target=typescript --tagName=gql"
+    "lint": "tslint -p tsconfig.json"
   },
   "keywords": [
     "email",
