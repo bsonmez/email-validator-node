@@ -33756,4 +33756,6 @@ module.exports = {
   "mailkert.com": 1,
   "maito.space": 1,
   "mail2run.com": 1,
+  "gufum.com": 1,
+  "covbase.com": 1,
 };
