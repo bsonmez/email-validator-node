@@ -19,7 +19,8 @@
     "dev": "rollup -c -w",
     "build": "rollup -c",
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
-    "lint": "tslint -p tsconfig.json"
+    "lint": "tslint -p tsconfig.json",
+    "publish": "yarn build && npm publish"
   },
   "keywords": [
     "email",
