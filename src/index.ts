@@ -34,6 +34,7 @@ async function checkEmail(email: string): Promise<validateEmailResponse> {
  * @return {Boolean}
  */
 async function isEmailFormatValid(email: string): Promise<boolean> {
+  if (!email) return false;
   if (!email.length) return false;
   if (typeof email !== "string") return false;
   if (email && !isValidEmail.test(email.toLowerCase())) return false;
