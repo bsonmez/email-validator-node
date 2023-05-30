@@ -95,11 +95,11 @@ async function isMXRecordValid(email: string): Promise<validateEmailResponse> {
         } else if (err.code == "ENOTFOUND" || err.code == "ENODATA") {
           resolve({ isValid: false, mxRecords: null, message: "not-found" });
         } else {
-          reject(new Error(err.code));
+          resolve({ isValid: false, mxRecords: null, message: "error" });
         }
       });
-    } catch (error) {
-      reject({ isValid: false, mxRecords: null, message: error });
+    } catch (error: any) {
+      resolve({ isValid: false, mxRecords: null, message: error.message });
     }
   });
 }
