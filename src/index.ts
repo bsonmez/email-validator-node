@@ -86,17 +86,21 @@ type validateEmailResponse = Promise<object>
 async function isMXRecordValid(email: string): Promise<validateEmailResponse> {
   const [account, domain] = email.split("@");
   return new Promise((resolve, reject) => {
-    dns.resolveMx(domain, (err: any, mx: any) => {
-      if (typeof mx != "undefined") {
-        mx && mx.length
-          ? resolve({ isValid: true, mxRecords: mx })
-          : resolve({ isValid: false, mxRecords: null });
-      } else if (err.code == "ENOTFOUND" || err.code == "ENODATA") {
-        resolve({ isValid: false, mxRecords: null, message: "not-found" });
-      } else {
-        reject(new Error(err.code));
-      }
-    });
+    try {
+      dns.resolveMx(domain, (err: any, mx: any) => {
+        if (typeof mx != "undefined") {
+          mx && mx.length
+            ? resolve({ isValid: true, mxRecords: mx })
+            : resolve({ isValid: false, mxRecords: null });
+        } else if (err.code == "ENOTFOUND" || err.code == "ENODATA") {
+          resolve({ isValid: false, mxRecords: null, message: "not-found" });
+        } else {
+          reject(new Error(err.code));
+        }
+      });
+    } catch (error) {
+      reject({ isValid: false, mxRecords: null, message: error });
+    }
   });
 }
 
