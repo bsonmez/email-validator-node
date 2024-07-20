@@ -92,7 +92,7 @@ async function isMXRecordValid(email: string): Promise<validateEmailResponse> {
           mx && mx.length
             ? resolve({ isValid: true, mxRecords: mx })
             : resolve({ isValid: false, mxRecords: null });
-        } else if (err.code == "ENOTFOUND" || err.code == "ENODATA") {
+        } else if (err.code == "ENOTFOUND" || err.code == "ENODATA" || err.code == 'SERVFAIL') {
           resolve({ isValid: false, mxRecords: null, message: "not-found" });
         } else {
           resolve({ isValid: false, mxRecords: null, message: "error" });
