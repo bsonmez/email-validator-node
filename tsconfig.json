@@ -2,22 +2,21 @@
   "compilerOptions": {
     "declaration": true,
     "declarationDir": "./lib",
-    "target": "es5",
-    "lib": ["es6"],
+    "target": "ES2018",
+    "lib": ["ES2018"],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
     "forceConsistentCasingInFileNames": true,
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "noEmit": true,
+    "noEmit": false,
     "esModuleInterop": true,
-    "module": "esnext",
+    "allowSyntheticDefaultImports": true,
+    "module": "ES2020",
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve"
+    "types": ["node", "jest"]
   },
-  "include": ["src/index.ts"],
-  "exclude": ["node_modules", "**/__tests__/*"]
+  "include": ["src/index.ts", "src/blacklist.ts"],
+  "exclude": ["node_modules", "lib/**/*", "coverage/**/*", "src/__test__/**/*"]
 }

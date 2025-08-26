@@ -1,5 +1,4 @@
 import typescript from "rollup-plugin-typescript2";
-import external from "rollup-plugin-peer-deps-external";
 
 export default [
   {
@@ -13,15 +12,16 @@ export default [
       },
     ],
     plugins: [
-      external(),
       typescript({
         clean: true,
         useTsconfigDeclarationDir: true,
+        tsconfig: "./tsconfig.json"
       }),
     ],
+    external: ['dns'],
   },
   {
-    input: "./src/blacklist.js",
+    input: "./src/blacklist.ts",
     output: [
       {
         file: "./lib/blacklist.js",
@@ -31,10 +31,10 @@ export default [
       },
     ],
     plugins: [
-      external(),
       typescript({
         clean: true,
         useTsconfigDeclarationDir: true,
+        tsconfig: "./tsconfig.json"
       }),
     ],
   },
